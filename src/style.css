@@ -550,7 +550,11 @@ button:focus {
   color: white !important;
 }
 
-
+#fortune-cookie > button{
+  background: transparent !important;
+  border: none !important;
+  font-size:0;
+}
 
 .fortune_cookie:hover {
   animation: shake 1s ease infinite;

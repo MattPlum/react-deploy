@@ -1,6 +1,8 @@
 import React from "react";
 import cookie from "../../Assets/fortune_cookie.svg";
+import {Button, Modal} from "react-bootstrap";
 import $ from 'jquery';
+
 
 var array = 
 [
@@ -14,25 +16,40 @@ var array =
 
 ]
 
+const getRandomFact = () => {
+    return array[Math.floor(Math.random() * array.length)];
+  };
 
-$(function(){
-    $('.fortune_cookie').on("click", function(e){
-      $('.active').removeClass('active');
-      $(this).addClass('active');
-      alert(array[Math.floor(Math.random() * array.length)]);
-      console.log(Math.floor(Math.random() * array.length))
-    });
-  });
+class Cookie extends React.Component {
+    constructor(){
+        super();
+        this.state = {
+            show:false
+        }
+    }
+    handleModal(){
+        this.setState({show:!this.state.show});
+    }
+    
 
-
-function Cookie() {
-    return (
+    render() {
+        const randomFact = getRandomFact();
+        return (
         <div id="fortune-cookie">   
             <h2 class="subtopic">Open this fortune cookie to learn more!</h2>            
-            <img src={cookie} className="fortune_cookie" alt="avatar" width="300" height="300"/>
-            
+            <Button onClick= {()=>{this.handleModal()}}><img src={cookie} className="fortune_cookie" alt="avatar" width="300" height="300"/></Button>
+            <Modal show ={this.state.show}>
+                <Modal.Header>Modal Header</Modal.Header>
+                <Modal.Body>
+                    {randomFact}
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button onClick={()=>{this.handleModal()}}>Close Modal</Button>
+                </Modal.Footer>
+            </Modal>
         </div>
         )
+    }
 }
 
 export default Cookie;
