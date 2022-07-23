@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://github.com/MattPlum/react-deploy.git",
+  "homepage": "https://mattplum.github.io/react-deploy/",
   "private": true,
   "dependencies": {
     "@react-pdf/renderer": "^2.2.0",
