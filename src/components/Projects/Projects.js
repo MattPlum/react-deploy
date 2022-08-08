@@ -27,7 +27,7 @@ function Projects() {
               isBlog={false}
               title="Old Website"
               description="The first website I made for fun, this helped me learn more about front end development"
-              ghLink="https://github.com/MattPlum/MattPlum.github.io"
+              ghLink="https://github.com/MattPlum/old_website"
             />
           </Col>
           <Col md={5} className="project-card">
@@ -63,7 +63,6 @@ function Projects() {
               isBlog={false}
               title="Google Docs Clone"
               description="Project to immitate Google Docs allowing for multiple users to write in the same document and have it persist across sessions. Dployed the application to Google Cloud using Docker containers"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
             />
           </Col>
           <Col md={5} className="project-card">
