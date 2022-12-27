@@ -7,7 +7,7 @@ function Type() {
       options={{
         strings: [
           "Candidate for Master's in Cyber Security",
-          "BS in Compuer Information Systems",
+          "BS in Computer Information Systems",
           "Computer Enthusiast",
           "Dog Lover"
         ],
