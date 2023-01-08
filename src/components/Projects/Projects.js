@@ -4,6 +4,7 @@ import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
 import lead_game from "../../Assets/Projects/lead_game_gif.gif";
 import old_website from "../../Assets/Projects/old_website.gif";
+import honeypot from "../../Assets/Projects/honeypot.gif";
 import caesar from "../../Assets/Projects/caesar.png";
 import aes_rsa from "../../Assets/Projects/aes_rsa.png";
 import sqlinjection from "../../Assets/Projects/sqlinjection.png";
@@ -21,6 +22,16 @@ function Projects() {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+        <Col md={5} className="project-card">
+            <ProjectCard
+              imgPath={honeypot}
+              isBlog={false}
+              title="Honeypot"
+              description="Deployed MHN-Admin VM on Google Cloud to create Dionaea and
+              Snort honeypots to capture IP attacks from around the world"
+              ghLink="https://github.com/MattPlum/Honeypot"
+            />
+          </Col>
           <Col md={5} className="project-card">
             <ProjectCard
               imgPath={old_website}
